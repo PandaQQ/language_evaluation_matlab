@@ -15,7 +15,7 @@ Video User Guide:
 - You can adjust as you want pp_02, pp03
 ```
 vidObj = VideoReader("./pp_01/test.mp4");
-audioObj = audioread('./pp_01/test.mp3');
+audioPath = "./pp_01/test.mp3";
 ```
 
 #### Step 2:

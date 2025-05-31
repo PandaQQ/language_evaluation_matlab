@@ -3,7 +3,7 @@ clear;
 % subs = dir(['./*.mp4']);
 % File Path
 vidObj = VideoReader("./pp_01/test.mp4");
-audioObj = audioread('./pp_01/test.mp3');
+audioPath = "./pp_01/test.mp3";
 frameRate = round(vidObj.FrameRate);
 % Time Configuration
 time_sm(1) = 60*0+10;%pre-task point
@@ -38,12 +38,12 @@ figure;plot(corrs,'.');
 
 times = find(corrs>0.98)/frameRate + time_sm(1);
 
-[y,Fs] = audioObj;
+[y,Fs] = audioread(audioPath);
 
 %----------------------------------------------
 
 % sensorimotor (show 3 seconds)
-j = 1;
+j = 15;
 t_dur = 3;%second
 
 

@@ -4,7 +4,7 @@ clear;
 
 % File Path
 vidObj = VideoReader("./pp_01/test.mp4");
-audioObj = audioread('./pp_01/test.mp3');
+audioPath = "./pp_01/test.mp3";
 frameRate = round(vidObj.FrameRate);
 
 % Time Configuration
@@ -39,7 +39,7 @@ figure;plot(corrs,'.');
 
 times = find(corrs>0.98)/frameRate + time_rd(1);
 
-[y,Fs] = audioObj;
+[y,Fs] = audioread(audioPath);
 
 %----------------------------------------------
 
