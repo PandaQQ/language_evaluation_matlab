@@ -43,7 +43,7 @@ times = find(corrs>0.98)/frameRate + time_sm(1);
 %----------------------------------------------
 
 % sensorimotor (show 3 seconds)
-j = 15;
+j = 3;
 t_dur = 3;%second
 
 

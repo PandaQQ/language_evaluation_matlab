@@ -6,7 +6,7 @@
 - How to extract audio: https://cloudconvert.com/mp4-to-mp3
 - Place each participant's test.mp3 and test.mp4 into their respective folders (pp01, pp02, etc.).
 
-Video User Guide:
+Video User Guide: https://youtu.be/uPb8oRAdEGU
 
 ### Detail Usage Guide:
 

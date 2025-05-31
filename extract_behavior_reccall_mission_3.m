@@ -42,7 +42,7 @@ times = find(corrs>0.98)/frameRate + time_rd(1);
 %----------------------------------------------
 
 % recall (show 3 seconds)
-j = 1;
+j = 3;
 t_dur = 8; %second
 
 h = figure('Units','normalized','position',[0,.2,1,.7]);
