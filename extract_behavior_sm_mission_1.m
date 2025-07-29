@@ -2,13 +2,16 @@ clear;
 
 % subs = dir(['./*.mp4']);
 % File Path
-vidObj = VideoReader("./pp_01/test.mp4");
-audioPath = "./pp_01/test.mp3";
+
+fileName = "P034";
+
+vidObj = VideoReader("./"+ fileName +"/test.mp4");
+audioPath = "./"+ fileName + "/test.mp3";
 frameRate = round(vidObj.FrameRate);
 % Time Configuration
-time_sm(1) = 60*0+10;%pre-task point
-time_sm(2) = 60*0+41;%black marker point
-time_sm(3) = 60*2+13;%post-task point
+time_sm(1) = 60*0+15 ;%pre-task point
+time_sm(2) = 60*0+20;%black marker point
+time_sm(3) = 60*1+13;%post-task point
 
 
 vidFrame = read(vidObj, time_sm(2) * frameRate);
@@ -43,7 +46,7 @@ times = find(corrs>0.98)/frameRate + time_sm(1);
 %----------------------------------------------
 
 % sensorimotor (show 3 seconds)
-j = 3;
+j = 14;
 t_dur = 3;%second
 
 

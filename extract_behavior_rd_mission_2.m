@@ -3,14 +3,15 @@ clear;
 % subs = dir(['./*.mp4']);
 
 % File Path
-vidObj = VideoReader("./pp_01/test.mp4");
-audioPath = "./pp_01/test.mp3";
+fileName = "P034";
+vidObj = VideoReader("./"+ fileName +"/test.mp4");
+audioPath = "./"+ fileName +"/test.mp3";
 frameRate = round(vidObj.FrameRate);
 
 % Time Configuration
-time_rd(1) = 60*2+23;%pre-task point
-time_rd(2) = 60*4+47;%black marker point
-time_rd(3) = 60*5+39;%post-task point
+time_rd(1) = 60*2+03;%pre-task point
+time_rd(2) = 60*2+07;%black marker point
+time_rd(3) = 60*4+31;%post-task point
 
 vidFrame = read(vidObj,time_rd(2)*frameRate);
 figure();imshow(vidFrame);
@@ -44,8 +45,8 @@ times = find(corrs>0.98)/frameRate + time_rd(1);
 %----------------------------------------------
 
 % reversedigit (show 3 seconds)
-j = 3;
-t_dur = 8;%second
+j = 2;
+t_dur = 10;%second
 
 h = figure('Units','normalized','position',[0,.2,1,.7]);
 p = axes(h,'position',[.1,.6,.8,.3]);

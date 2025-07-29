@@ -1,13 +1,13 @@
 clear;
 % subs = dir(['./*.mp4']);
 % File Path
-vidObj = VideoReader("./pp_01/test.mp4");
-audioPath = "./pp_01/test.mp3";
+vidObj = VideoReader("./P042/test.mp4");
+audioPath = "./P042/test.mp3";
 frameRate = round(vidObj.FrameRate);
 % Time Configuration
-time_rd(1) = 60*5+46;%pre-task point
-time_rd(2) = 60*6+21;%black marker point
-time_rd(3) = 60*11+23;%post-task point
+time_rd(1) = 60*8+24;%pre-task point
+time_rd(2) = 60*8+34;%black marker point
+time_rd(3) = 60*12+33;%post-task point
 
 vidFrame = read(vidObj,time_rd(2)*frameRate);
 figure();imshow(vidFrame);
@@ -42,8 +42,8 @@ times = find(corrs>0.98)/frameRate + time_rd(1);
 %----------------------------------------------
 
 % recall (show 3 seconds)
-j = 3;
-t_dur = 8; %second
+j = 12;
+t_dur = 15; %second
 
 h = figure('Units','normalized','position',[0,.2,1,.7]);
 p = axes(h,'position',[.1,.6,.8,.3]);
